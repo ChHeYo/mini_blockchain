@@ -30,12 +30,12 @@ class Blockchain:
             raw_tx_list.append(new_tx)
             hashed_tx_list.append(new_tx.hash_tx())
         block = Block(hashed_tx_list, raw_tx_list)
-        block.attaching_markle_root_to_tx()
+        block.attaching_merkle_root_to_tx()
         return block
 
     def add_block(self, block):
         self.chain.append(block)
 
     def __repr__(self):
-        return ("\nThis blockchain has the genesis block with markle root of: \n" +
+        return ("\nThis blockchain has the genesis block with merkle root of: \n" +
                 str(self.genesis_block))
