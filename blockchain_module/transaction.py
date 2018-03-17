@@ -33,8 +33,8 @@ class Transaction:
         hashed_info.update(self.concatenated_info())
         return hashed_info.hexdigest()
 
-    def add_markle_root(self, markle_root):
-        self.markle_root = markle_root
+    def add_merkle_root(self, merkle_root):
+        self.merkle_root = merkle_root
 
     def __repr__(self):
         return ('Transaction ' + str(self.index) + ': ' +
