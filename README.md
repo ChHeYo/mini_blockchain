@@ -8,6 +8,8 @@ You can run the simulation by running the 'main.py' file.
 python main.py
 ```
 
+<br/>
+
 ### Things to Note:
 
 * Usually transactions are in JSON format but this project does not include distributed system (or at least not yet)
