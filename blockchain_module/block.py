@@ -7,7 +7,7 @@ class Block:
     A block in bitcoin blockchain can have as many txs as a miner wishes.
     '''
     def __init__(self, txlist, raw_txlist):
-        self.markle_root = self.find_merkle_root(txlist)
+        self.merkle_root = self.find_merkle_root(txlist)
         self.raw_txlist = raw_txlist
 
     def find_merkle_root(self, txlist):
@@ -25,12 +25,12 @@ class Block:
             combinedHash.append(combine_two_nodes(txlist[-1], txlist[-1]))
         return self.find_merkle_root(combinedHash)
 
-    def attaching_markle_root_to_tx(self):
+    def attaching_merkle_root_to_tx(self):
         for each_tx in self.raw_txlist:
-            each_tx.add_markle_root(self.markle_root)
+            each_tx.add_merkle_root(self.merkle_root)
 
     def __repr__(self):
-        return self.markle_root
+        return self.merkle_root
 
 
 def combine_two_nodes(node_a, node_b):
