@@ -10,6 +10,9 @@ python main.py
 
 <br/>
 
+### Java Version
+[Link to Java Version](https://github.com/ChHeYo/block)
+
 ### Things to Note:
 
 * Usually transactions are in JSON format but this project does not include distributed system (or at least not yet)
